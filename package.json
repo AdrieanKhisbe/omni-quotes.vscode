@@ -11,7 +11,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.displayQuote"
+        "onCommand:extension.displayQuote",
+        "onCommand:extension.toggleQuoteMode"
     ],
     "main": "./extension",
     "contributes": {
@@ -19,6 +20,10 @@
             {
                 "command": "extension.displayQuote",
                 "title": "Display Quote"
+            },
+            {
+                "command": "extension.toggleQuoteMode",
+                "title": "Toggle Quote Mode"
             }
         ]
     },
