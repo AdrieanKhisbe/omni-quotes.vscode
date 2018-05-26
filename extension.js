@@ -1,11 +1,13 @@
 const vscode = require('vscode');
-const {getQuote} = require('./lib/quotes');
-const {displayQuote, toggleQuoteMode} = require('./lib/commands')(vscode);
+const { getQuote } = require('./lib/quotes');
+const commands = require('./lib/commands');
 
 function activate(context) {
 
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     console.log('"omni-quotes" is now active!');
+
+    const { displayQuote, toggleQuoteMode } = commands(vscode, context);
 
     const disposables = [
         vscode.commands.registerCommand('extension.displayQuote', displayQuote),
