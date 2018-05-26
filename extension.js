@@ -1,5 +1,4 @@
 const vscode = require('vscode');
-const { getQuote } = require('./lib/quotes');
 const commands = require('./lib/commands');
 
 function activate(context) {
